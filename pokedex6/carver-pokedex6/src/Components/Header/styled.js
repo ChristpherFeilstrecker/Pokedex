@@ -7,6 +7,7 @@ justify-content: center;
 margin: 0;
 border: 1px solid black;
 background-color: red;
+flex-grow: 0;
 `
 
 export const Img = styled.img`
