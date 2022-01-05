@@ -18,7 +18,7 @@ margin: 0;
 border: 1px solid blue;
 height: 100%;
 gap: 2vh;
-font-size: 24px;
+font-size: 20px;
 /* font-weight: bolder; */
 `
 
@@ -35,6 +35,7 @@ display: flex;
 flex-direction: column;
 box-shadow: 5px 5px black;
 background-color: darkgrey;
+padding-left:10px;
 `
 
 export const Img = styled.img`

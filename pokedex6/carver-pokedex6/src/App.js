@@ -1,11 +1,13 @@
+import GlobalPokedex from "./Components/Global/GlobalPokedex";
 import { Router } from "./Router/Router";
 
 
 function App() {
+  
   return (
-    <div className="App">
+    <GlobalPokedex>
         <Router />
-    </div>
+    </GlobalPokedex>
   );
 }
 

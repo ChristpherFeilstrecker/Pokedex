@@ -8,4 +8,9 @@ align-items: center;
 margin: 0;
 border: 1px solid black;
 flex-grow: 0;
+font-size: 24px;
+`
+
+export const Button = styled.button`
+font-size: 24px;
 `

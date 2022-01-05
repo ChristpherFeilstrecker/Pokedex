@@ -18,7 +18,7 @@ grid-template-rows: 1fr 1fr;
 justify-content: center;
 margin: 0;
 border: 1px solid blue;
-height: 100%;
+height: 100vh;
 gap: 2vh;
 font-size: 24px;
 `

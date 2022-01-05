@@ -8,7 +8,7 @@ import ErrorPage from "../Error/ErrorPage";
 export const Router = () => {
     return (
         <BrowserRouter>
-            <Header />
+            
                 <Routes>    
                     <Route exact path={"/"} element={<Home />}/>
                     <Route exact path={"/Pokedex"} element={<PokedexPage />}/>
