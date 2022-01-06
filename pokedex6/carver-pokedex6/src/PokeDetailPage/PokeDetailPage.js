@@ -12,35 +12,36 @@ import PokedexContext from "../Components/Global/GlobalPokeStateContext";
 function PokeDetailPage() {
   const { name } = useParams()
   const [isLoading, setIsLoading] = useState(false);
-  const [pokemons3, getPokemons3] = useRequestData3(setIsLoading, `${BASE_URL}/${name}`)
-  const {pokedex, setPokedex} = useContext(PokedexContext)
+  const [pokemons3, getPokemons3, ] = useRequestData3(setIsLoading, `${BASE_URL}/${name}`)
+  const {pokedex, setPokedex, pokeNames, setPokeNames, pokemonList, setPokemonList} = useContext(PokedexContext)
   const navigate = useNavigate()
   const pokemon = pokemons3
   
+  const pageDetail = true
+  
 
 
-//   const AddPokemon = ()=>{
-//     // const pokeImg = pokemon.sprites.front_default
-//     const data2 = {
-//         name: name,
-//         // imagem: pokeImg
-//     }
-//     const newPokedex = [...pokedex, data2 ]
-//     setPokedex(newPokedex)
-    
-    
-// }
+  const AddPokemon = ()=>{
+    // const pokeImg = pokemon.sprites.front_default
+    const data2 = {
+        name: name,
+        // imagem: pokeImg
+    }
+    const newPokedex = [...pokedex, data2 ]
+    setPokedex(newPokedex)
 
-// const RemovePokemon = ()=>{
-//     const index = pokedex.findIndex((pokeIndex)=>
-//     pokeIndex.name === name
-//     )
-//     const newPokedex = [...pokedex]
-//     newPokedex.splice(index, 1)
-//     setPokedex(newPokedex)
+}
+
+const RemovePokemon = ()=>{
+    const index = pokedex.findIndex((pokeIndex)=>
+    pokeIndex.name === name
+    )
+    const newPokedex = [...pokedex]
+    newPokedex.splice(index, 1)
+    setPokedex(newPokedex)
     
     
-// }
+}
 
   
 
@@ -94,8 +95,10 @@ function PokeDetailPage() {
       buttonFunction={()=>navigate(-1)}
       state={true}
       name2={`Add/Remover Pokedex`}
-      // AddPokemon = {AddPokemon()}
-      // RemovePokemon = {RemovePokemon()}
+      pokeName={name}
+      AddPokemon = {AddPokemon}
+      RemovePokemon = {RemovePokemon}
+      // pageDetail={pageDetail}
       />
 
     {pokemon && GetPokemon()}

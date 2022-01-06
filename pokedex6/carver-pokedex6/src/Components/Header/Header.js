@@ -4,35 +4,51 @@ import Logo from '../../img/pokemon-logo.png'
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { GoToHome, GoToPokeDex } from "../../Router/RouterFunctions";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import PokedexContext from "../../Components/Global/GlobalPokeStateContext";
 
 export default function Header(props) {
-    const [pokedex, setPokedex] = useState("")
+    const { pokedex, setPokedex } = useContext(PokedexContext)
     const navigate = useNavigate()
 
-    
-    
-    const page = (state) =>{
-       if(state===true){
-        return (
-        <Container>
-        <button onClick={props.buttonFunction}>{props.name}</button>
-        <p><Img src={Logo}/></p>
-        <button onClick={props.page ? props.RemovePokemon : props.AddPokemon}>{props.page ? "Remover" : "Adicionar"}</button>
-        </Container>
-        )}else if(state===false){
+    const findPokemon = (poke) =>{
+        if( poke.name === props.pokeName){
+            return true
+        }
+    }
+
+    const pokeInclude = pokedex.find(findPokemon)
+
+    const find2 = (poke) =>{
+        if(poke !== undefined){
+            return true
+        }
+    }
+
+
+    const page = (state) => {
+        if (state === true) {
             return (
                 <Container>
-                <button onClick={props.buttonFunction}>{props.name}</button>
-                <p><Img src={Logo}/></p>
-                <p></p>
+                    <button onClick={props.buttonFunction}>{props.name}</button>
+                    <p><Img src={Logo} /></p>
+                    <button onClick={find2(pokeInclude) ? props.RemovePokemon : props.AddPokemon}>{find2(pokeInclude) ? "Remover" : "Adicionar"  }</button>
                 </Container>
-            )}
-        
+            )
+        } else if (state === false) {
+            return (
+                <Container>
+                    <button onClick={props.buttonFunction}>{props.name}</button>
+                    <p><Img src={Logo} /></p>
+                    <p></p>
+                </Container>
+            )
+        }
 
-    } 
 
-    
+    }
+
+
     return (
         <ContainerPrincipal>
 
@@ -43,7 +59,7 @@ export default function Header(props) {
             <p></p>
             <button>{props.name2}</button> */}
 
-            
+
         </ContainerPrincipal>
     )
 
