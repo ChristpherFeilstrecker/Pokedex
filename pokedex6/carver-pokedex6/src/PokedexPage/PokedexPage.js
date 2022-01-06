@@ -13,14 +13,11 @@ function PokedexPage() {
   const page = true
   
   
-
-  console.log("pokedexPage", pokedex)
-
   const pokeList = pokedex.map((pokemon) => {
 
     return (
       <PokeCard
-        name={pokemon.name}
+        pokemon={pokemon}
         page={page}
       />
     )
