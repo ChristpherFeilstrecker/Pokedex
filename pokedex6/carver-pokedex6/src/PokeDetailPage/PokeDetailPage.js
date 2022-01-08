@@ -12,58 +12,54 @@ import PokedexContext from "../Components/Global/GlobalPokeStateContext";
 function PokeDetailPage() {
   const { name } = useParams()
   const [isLoading, setIsLoading] = useState(false);
-  const [pokemons3, getPokemons3, ] = useRequestData3(setIsLoading, `${BASE_URL}/${name}`)
-  const {pokedex, setPokedex, pokeNames, setPokeNames, pokemonList, setPokemonList} = useContext(PokedexContext)
+  const [pokemons3, getPokemons3,] = useRequestData3(setIsLoading, `${BASE_URL}/${name}`)
+  const { pokedex, setPokedex, pokeNames, setPokeNames, pokemonList, setPokemonList } = useContext(PokedexContext)
   const navigate = useNavigate()
   const pokemon = pokemons3
-  
-  const pageDetail = true
-  
+  const pokemonName = name
+  const nameUpper = pokemonName[0].toUpperCase() + pokemonName.substring(1)
 
 
-  const AddPokemon = ()=>{
-    // const pokeImg = pokemon.sprites.front_default
+  const AddPokemon = () => {
+
     const data2 = {
-        name: name,
-        // imagem: pokeImg
+      name: name,
+
     }
-    const newPokedex = [...pokedex, data2 ]
+    const newPokedex = [...pokedex, data2]
     setPokedex(newPokedex)
 
-}
+  }
 
-const RemovePokemon = ()=>{
-    const index = pokedex.findIndex((pokeIndex)=>
-    pokeIndex.name === name
+  const RemovePokemon = () => {
+    const index = pokedex.findIndex((pokeIndex) =>
+      pokeIndex.name === name
     )
     const newPokedex = [...pokedex]
     newPokedex.splice(index, 1)
     setPokedex(newPokedex)
-    
-    
-}
 
-  
-
-
+  }
 
   const GetPokemon = () => {
     return (
       <Container>
-       
+
         <ContainerImg>
           <Img src={pokemon.sprites.front_default} />
           <Img src={pokemon.sprites.back_default} />
         </ContainerImg>
 
         <BoxDetail>
-         <h4>Status</h4> 
-         <p><b>HP:</b> {pokemon.stats[0].base_stat}</p> 
-         <p><b>attack:</b> {pokemon.stats[1].base_stat}</p>
-         <p><b>defense:</b> {pokemon.stats[2].base_stat}</p>
-         <p><b>special-attack:</b> {pokemon.stats[3].base_stat}</p>
-         <p><b>special-defense:</b> {pokemon.stats[4].base_stat}</p> 
-         <p><b>speed:</b> {pokemon.stats[5].base_stat}</p> 
+
+          <h1>{nameUpper}</h1>
+          <h3>Status</h3>
+          <p><b>HP:</b> {pokemon.stats[0].base_stat}</p>
+          <p><b>attack:</b> {pokemon.stats[1].base_stat}</p>
+          <p><b>defense:</b> {pokemon.stats[2].base_stat}</p>
+          <p><b>special-attack:</b> {pokemon.stats[3].base_stat}</p>
+          <p><b>special-defense:</b> {pokemon.stats[4].base_stat}</p>
+          <p><b>speed:</b> {pokemon.stats[5].base_stat}</p>
         </BoxDetail>
 
         <div>
@@ -75,14 +71,14 @@ const RemovePokemon = ()=>{
           </BoxDetail>
 
           <BoxDetail>
-            
+
             <h3>Moves:</h3> {pokemon.moves.map((move, index) => {
               return index < 6 && <p>{move.move.name}</p>
             })}
           </BoxDetail>
 
         </div>
-        
+
       </Container>
     )
   }
@@ -91,17 +87,17 @@ const RemovePokemon = ()=>{
   return (
     <ContainerPrincipal>
       <Header
-      name={`voltar`}
-      buttonFunction={()=>navigate(-1)}
-      state={true}
-      name2={`Add/Remover Pokedex`}
-      pokeName={name}
-      AddPokemon = {AddPokemon}
-      RemovePokemon = {RemovePokemon}
-      // pageDetail={pageDetail}
+        name={`voltar`}
+        buttonFunction={() => navigate(-1)}
+        state={true}
+        name2={`Add/Remover Pokedex`}
+        pokeName={name}
+        AddPokemon={AddPokemon}
+        RemovePokemon={RemovePokemon}
+
       />
 
-    {pokemon && GetPokemon()}
+      {pokemon && GetPokemon()}
 
 
     </ContainerPrincipal>
