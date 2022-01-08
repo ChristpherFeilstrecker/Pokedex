@@ -6,21 +6,21 @@ import { useParams } from "react-router-dom";
 import { GoToHome, GoToPokeDex } from "../../Router/RouterFunctions";
 import { useState, useContext } from "react";
 import PokedexContext from "../../Components/Global/GlobalPokeStateContext";
-
+import Logo2 from '../../img/Pokedex.png'
 export default function Header(props) {
     const { pokedex, setPokedex } = useContext(PokedexContext)
     const navigate = useNavigate()
 
-    const findPokemon = (poke) =>{
-        if( poke.name === props.pokeName){
+    const findPokemon = (poke) => {
+        if (poke.name === props.pokeName) {
             return true
         }
     }
 
     const pokeInclude = pokedex.find(findPokemon)
 
-    const find2 = (poke) =>{
-        if(poke !== undefined){
+    const find2 = (poke) => {
+        if (poke !== undefined) {
             return true
         }
     }
@@ -31,15 +31,15 @@ export default function Header(props) {
             return (
                 <Container>
                     <button onClick={props.buttonFunction}>{props.name}</button>
-                    <p><Img src={Logo} /></p>
-                    <button onClick={find2(pokeInclude) ? props.RemovePokemon : props.AddPokemon}>{find2(pokeInclude) ? "Remover" : "Adicionar"  }</button>
+                    <p><Img src={Logo} onClick={() => GoToHome(navigate)} /></p>
+                    <button onClick={find2(pokeInclude) ? props.RemovePokemon : props.AddPokemon}>{find2(pokeInclude) ? "Remover" : "Adicionar"}</button>
                 </Container>
             )
         } else if (state === false) {
             return (
                 <Container>
-                    <button onClick={props.buttonFunction}>{props.name}</button>
-                    <p><Img src={Logo} /></p>
+                    <Img src={Logo2} onClick={props.buttonFunction} />
+                    <p><Img src={Logo} onClick={() => GoToHome(navigate)} /></p>
                     <p></p>
                 </Container>
             )
@@ -53,12 +53,6 @@ export default function Header(props) {
         <ContainerPrincipal>
 
             {page(props.state)}
-
-            {/* <button onClick={props.buttonFunction}>{props.name}</button>
-            <p><Img src={Logo}/></p>
-            <p></p>
-            <button>{props.name2}</button> */}
-
 
         </ContainerPrincipal>
     )

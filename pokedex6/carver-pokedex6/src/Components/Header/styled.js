@@ -17,4 +17,5 @@ align-items: center;
 export const Img = styled.img`
 width: 5vw;
 heigth: 5vh;
+cursor: pointer;
 `

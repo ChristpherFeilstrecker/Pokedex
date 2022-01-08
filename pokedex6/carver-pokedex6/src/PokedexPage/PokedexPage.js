@@ -8,11 +8,10 @@ import PokeCard from "../Components/PokeCard/PokeCard";
 import { ContainerGrid, ContainerPrincipal } from "./styled";
 import { useEffect } from "react";
 function PokedexPage() {
-  const {pokedex, setPokedex} = useContext(PokedexContext)
+  const { pokedex, setPokedex } = useContext(PokedexContext)
   const navigate = useNavigate()
   const page = true
-  
-  
+
   const pokeList = pokedex.map((pokemon) => {
 
     return (
@@ -21,22 +20,22 @@ function PokedexPage() {
         page={page}
       />
     )
+
   })
 
-    return (
-      <ContainerPrincipal>
-        <Header
-        name={`Lista de Pokemóns`}
-        buttonFunction={()=>GoToHome(navigate)}
+  return (
+    <ContainerPrincipal>
+      <Header
+        name={`Lista de Pokemons`}
+        buttonFunction={() => GoToHome(navigate)}
         state={false}
-        
-        />
-      <ContainerGrid>  
-      {pokeList}
+
+      />
+      <ContainerGrid>
+        {pokeList}
       </ContainerGrid>
-      </ContainerPrincipal>
-    );
-  }
-  
-  export default PokedexPage;
-  
+    </ContainerPrincipal>
+  );
+}
+
+export default PokedexPage;

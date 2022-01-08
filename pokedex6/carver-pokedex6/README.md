@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+ # Projeto Pokedex
+> Estado: Em desenvolvimento ⚠️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ Site projetado para exercitar Estados Globais usando React Context
+ [acessar Pokedex aqui]("Link Surge")
 
-## Available Scripts
+### Desenvolvedores:
+- Fabio José Lucena de Oliveira 
+- Christopher Feilstrecker da Silva
+- Lucas De Souza Domingues
 
-In the project directory, you can run:
+## Alguns campos do projeto são:
 
-### `npm start`
+### - Pagina inicial(Lista de pokemons)
+* Header - Botão para acessar pokedex
+* Body - Lista com 20 Cards de pokemons com botões para adicionar a pokedex e acessar detalhes do pokemon
+* Footer - Botões para acessar os próximos 20 pokemons e voltar a página anterior
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### - Página Pokedex
+*Header - Botão para retornar a lista de pokemons
+*Body - Pokemons adicionados a pokedex
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### - Página detalhes dos pokemons
+Header - Botão para voltar a página anterior e botão para adcionar ou remover pokemon da pokedex
+Body - detalhes do pokemon selecionado
 
-### `npm test`
+### Tecnologia Utilizada:
+******************************
+ Javascript | Styled-components | JSX | React.js | React-Router-Dom| Axios |
+******************************
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Como baixar e rodar app:
+1. Baixe os arquivos do projeto em seu repositório pelo terminal.
+2. Acesse a pasta de arquivos através do terminal.
+3. No terminal, execute os comandos "npm install styled-components", "npm install axios"e "npm install React-router-dom", aguarde a conclusão das instalações.
+4. Finalmente, execute o comando "npm run start" em seu terminal para executar o projeto em seu navegador.
 
-### `npm run build`
+### Entidade:
+- Labenu
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
