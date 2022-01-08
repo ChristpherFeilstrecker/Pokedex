@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Christopher Feilstrecker da Silva
 - Lucas De Souza Domingues
 
-Link do Surge: www.link.com.br
+Link do Surge: https://tenuous-cherries.surge.sh/
 
 O que funciona:
  Na Página Principal
