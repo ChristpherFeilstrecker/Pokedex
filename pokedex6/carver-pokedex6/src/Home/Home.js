@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import PokedexContext from "../Components/Global/GlobalPokeStateContext";
 import PokeIcon from "../img/Pokédex2.png"
 
+
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const { pokedex, setPokedex, pokeNames, setPokeNames, pokemonList, setPokemonList, pokeUrl, setPokeUrl, pokemons2, setPokemons2 } = useContext(PokedexContext)

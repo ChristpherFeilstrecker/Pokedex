@@ -20,9 +20,11 @@ margin: 15px;
 height: 100%;
 gap: 2vh;
 font-size: 24px;
+
       @media (min-device-width : 481px) and (max-device-width : 800px) {
         grid-template-columns: 1fr 1fr ;
       }
+
       @media (min-device-width : 320px) and (max-device-width : 480px) {
         grid-template-columns: 1fr ;
       }
@@ -52,3 +54,4 @@ height: 60vh;
 background-color: #b9e3f0;
 font-size: 24px;
 `
+

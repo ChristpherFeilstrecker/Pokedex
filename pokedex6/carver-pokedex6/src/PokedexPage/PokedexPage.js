@@ -27,16 +27,20 @@ function PokedexPage() {
   })
 
   return (
+
     <ContainerPrincipal>
 
+
       <Header
+       
         name={`Lista de Pokemons`}
         buttonFunction={() => GoToHome(navigate)}
         state={false}
         icon={PokeIcon}
-
       />
+      
       <ContainerGrid>
+
         {pokeList.length > 0 ? (
           <>{pokeList}</>
         ) : (
@@ -44,8 +48,12 @@ function PokedexPage() {
             <p>Pokedex vazia</p>
           </ContainerPokedexLoad>
         )}
+
       </ContainerGrid>
+      
     </ContainerPrincipal>
+    
+
   );
 }
 

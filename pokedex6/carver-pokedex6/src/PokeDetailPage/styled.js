@@ -18,6 +18,7 @@ height:90vh;
 @media (min-device-width : 481px) and (max-device-width : 800px) {
         grid-template-columns: 1fr 1fr ;
       }
+
       @media (min-device-width : 320px) and (max-device-width : 480px) {
         grid-template-columns: 1fr ;
       }

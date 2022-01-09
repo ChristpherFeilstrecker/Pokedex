@@ -45,6 +45,7 @@ function PokeDetailPage() {
 
         <ContainerImg>
           <ContainerImgDetail>
+
             <BackCircleDetail />
             <Img src={pokemon.sprites.front_default} />
           </ContainerImgDetail>
@@ -56,6 +57,7 @@ function PokeDetailPage() {
         </ContainerImg>
 
         <BoxDetail>
+
           <TextTitle>{nameUpper}</TextTitle>
           <TextSubTitle>Status</TextSubTitle>
           <Text><b>HP:</b> {pokemon.stats[0].base_stat}</Text>
@@ -75,6 +77,7 @@ function PokeDetailPage() {
           </BoxDetail>
 
           <BoxDetail>
+
             <TextSubTitle>Moves:</TextSubTitle> {pokemon.moves.map((move, index) => {
               return index < 6 && <Text>{move.move.name}</Text>
             })}
