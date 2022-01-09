@@ -7,10 +7,6 @@ import { ContainerPrincipal, ContainerImg, Container, BoxDetail, Img, ContainerI
 import Header from "../Components/Header/Header";
 import PokedexContext from "../Components/Global/GlobalPokeStateContext";
 
-
-
-
-
 function PokeDetailPage() {
   const { name } = useParams()
   const [isLoading, setIsLoading] = useState(false);
@@ -49,14 +45,15 @@ function PokeDetailPage() {
 
         <ContainerImg>
           <ContainerImgDetail>
-          <BackCircleDetail/>
-           <Img src={pokemon.sprites.front_default} /> 
+
+            <BackCircleDetail />
+            <Img src={pokemon.sprites.front_default} />
           </ContainerImgDetail>
           <ContainerImgDetail>
-          <BackCircleDetail/>
+            <BackCircleDetail />
             <Img src={pokemon.sprites.back_default} />
           </ContainerImgDetail>
-          
+
         </ContainerImg>
 
         <BoxDetail>

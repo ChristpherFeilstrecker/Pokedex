@@ -7,9 +7,8 @@ import { useContext } from "react";
 import PokeCard from "../Components/PokeCard/PokeCard";
 import { ContainerGrid, ContainerPokedexLoad, ContainerPrincipal } from "./styled";
 import { useEffect } from "react";
-import { Container } from "../PokeDetailPage/styled";
+import { Container } from "../PokeDetailPage/styled"
 import PokeIcon from "../img/Pokedex.png"
-
 
 function PokedexPage() {
   const { pokedex, setPokedex } = useContext(PokedexContext)
@@ -17,7 +16,7 @@ function PokedexPage() {
   const page = true
 
   const pokeList = pokedex.map((pokemon) => {
-
+    console.log(pokemon)
     return (
       <PokeCard
         pokemon={pokemon}
@@ -28,26 +27,28 @@ function PokedexPage() {
   })
 
   return (
-    
-          <ContainerPrincipal>
-          
+
+    <ContainerPrincipal>
+
+
       <Header
        
         name={`Lista de Pokemons`}
         buttonFunction={() => GoToHome(navigate)}
         state={false}
-        icon = {PokeIcon}
+        icon={PokeIcon}
       />
       
       <ContainerGrid>
-      {pokeList.length > 0 ? (
-              <>{pokeList}</>
-            ) : (
-              <ContainerPokedexLoad>
-                <p>Pokedex vazia</p>
-              </ContainerPokedexLoad>
-            )}
-        
+
+        {pokeList.length > 0 ? (
+          <>{pokeList}</>
+        ) : (
+          <ContainerPokedexLoad>
+            <p>Pokedex vazia</p>
+          </ContainerPokedexLoad>
+        )}
+
       </ContainerGrid>
       
     </ContainerPrincipal>
