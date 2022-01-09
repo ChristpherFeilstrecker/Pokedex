@@ -14,37 +14,42 @@ export default function PokeCard(props) {
     const navigate = useNavigate()
     const { pokedex, setPokedex, pokeNames, setPokeNames, pokemonList, setPokemonList } = useContext(PokedexContext)
     const [savePokedex, setSavePokedex] = useState([])
-    // setSavePokedex(pokedex)
+    const [pokedex2, setPokedex2] = useState([])
 
-    useEffect(() => {
-        getPokemons2()
-    }, [props.pokemon])
+    const findImg = () => {
+        const imagem = pokemonList.findIndex((item) =>
+            item.name === props.pokemon.name
+        )
+
+        return imagem
+    }
+
+    const imagem = pokemonList[findImg()].sprites.front_default
 
     const AddPokemon = () => {
 
         const newPokeNames = [...pokemonList]
         newPokeNames.forEach((item) => {
+
             if (item.name === props.pokemon.name) { item.pokedex = true }
         })
         setPokemonList(newPokeNames)
 
         const data2 = {
             name: props.pokemon.name,
-            imagem: pokemons2,
+            imagem: imagem,
         }
         const newPokedex = [...pokedex, data2]
         setPokedex(newPokedex)
-
     }
 
     const RemovePokemon = () => {
         const index = pokedex.findIndex((pokeIndex) =>
-            pokeIndex.name === props.name
+            pokeIndex.name === props.pokemon.name
         )
         const newPokedex = [...pokedex]
         newPokedex.splice(index, 1)
         setPokedex(newPokedex)
-
     }
 
     const pokemonName = props.pokemon.name
@@ -54,7 +59,7 @@ export default function PokeCard(props) {
         <ContainerCards>
             <BackCircle></BackCircle>
             <PokeInfo><b>{nameUpper}</b></PokeInfo>
-            <img src={pokemons2} />
+            <img src={imagem} />
             <ButtonsCard>
                 <Button onClick={props.page ? RemovePokemon : AddPokemon}>{props.page ? "Remover" : "Adicionar"}</Button>
                 <Button onClick={() => GoToDetailsPage(navigate, props.pokemon.name)}>ver detal.</Button>

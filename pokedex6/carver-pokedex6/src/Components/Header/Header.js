@@ -7,6 +7,7 @@ import { GoToHome, GoToPokeDex } from "../../Router/RouterFunctions";
 import { useState, useContext } from "react";
 import PokedexContext from "../../Components/Global/GlobalPokeStateContext";
 import Logo2 from '../../img/Pokedex.png'
+
 export default function Header(props) {
     const { pokedex, setPokedex } = useContext(PokedexContext)
     const navigate = useNavigate()
@@ -38,7 +39,7 @@ export default function Header(props) {
         } else if (state === false) {
             return (
                 <Container>
-                    <Img src={Logo2} onClick={props.buttonFunction} />
+                    <Img src={props.icon} onClick={props.buttonFunction} />
                     <p><Img src={Logo} onClick={() => GoToHome(navigate)} /></p>
                     <p></p>
                 </Container>

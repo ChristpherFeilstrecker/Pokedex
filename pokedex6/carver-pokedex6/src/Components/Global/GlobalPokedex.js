@@ -11,8 +11,17 @@ const GlobalPokedex = (props) => {
     const [pokemons2, setPokemons2] = useState({})
     const [data2, setData2] = useState({});
     const [data3, setData3] = useState({});
-
-
+   
+    useEffect(()=>{
+        const data = localStorage.getItem('Pokedex')
+        if (data){
+          setPokedex(JSON.parse(data))
+        }
+      }, [])
+    
+      useEffect(()=>{
+        localStorage.setItem('Pokedex', JSON.stringify(pokedex))
+      },[pokedex, pokemonList])
 
     useEffect(() => {
         GetPokemons();
@@ -46,7 +55,7 @@ const GlobalPokedex = (props) => {
     const GetPokemons = () => {
 
         axios
-            .get(`${pokeUrl}`)
+            .get(`${BASE_URL}?limit=1118`)
             .then((response) => {
                 setPokeNames(response.data.results);
                 setPokemons2(response.data)
