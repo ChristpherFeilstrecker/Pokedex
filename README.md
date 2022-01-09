@@ -25,5 +25,10 @@ O que funciona:
 - Detalhes do pokemon selecionado
 
 O que não funciona: 
-- Card soma da lista quando adicionado a pokedex, mas não retorna ao excluir, na troca de página a lista atualiza e voltam todos pokemons
+- Card soma da lista quando adicionado a pokedex, mas não retorna a lista ao excluir da pokedex.
 
+![image](https://user-images.githubusercontent.com/87909626/148696501-11306099-2843-49e3-adcb-02d7251ecff0.png)
+![image](https://user-images.githubusercontent.com/87909626/148696518-27527cfb-199d-490b-9293-368975a37380.png)
+![image](https://user-images.githubusercontent.com/87909626/148696524-412783e4-def9-4f13-b94e-b96b0c7306fa.png)
+![image](https://user-images.githubusercontent.com/87909626/148696533-ca23af11-e227-47d8-980c-5fbae883e15d.png)
+![image](https://user-images.githubusercontent.com/87909626/148696546-a3ab5971-4a7c-43ef-a798-32a74dda3394.png)
