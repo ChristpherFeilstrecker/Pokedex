@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Christopher Feilstrecker da Silva
 - Lucas De Souza Domingues
 
-Link do Surge: https://tenuous-cherries.surge.sh/
+Link do Surge: https://stale-day.surge.sh/
 
 O que funciona:
  Na Página Principal
