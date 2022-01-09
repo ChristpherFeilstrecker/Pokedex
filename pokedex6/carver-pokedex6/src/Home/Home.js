@@ -1,11 +1,12 @@
 import React, { useEffect, useContext } from "react";
-import { Button, ContainerGrid, ContainerPrincipal, ContainerButtons } from "./styled";
+import { Button, ContainerGrid, ContainerPrincipal, ContainerButtons, ContainerPrincipalLoad } from "./styled";
 import { useState } from 'react'
 import PokeCard from "../Components/PokeCard/PokeCard";
 import Header from "../Components/Header/Header";
 import { GoToPokeDex } from "../Router/RouterFunctions";
 import { useNavigate } from "react-router-dom";
 import PokedexContext from "../Components/Global/GlobalPokeStateContext";
+import PokeIcon from "../img/Pokédex.png"
 
 
 function Home() {
@@ -36,11 +37,17 @@ function Home() {
         name={`Pokedex`}
         buttonFunction={() => GoToPokeDex(navigate)}
         state={false}
+        icon = {PokeIcon}
       />
 
       <ContainerGrid>
-
-        {getPokeList()}
+      {pokemonList.length > 0 ? (
+              <>{getPokeList()}</>
+            ) : (
+              <ContainerPrincipalLoad>
+                <h1>Carregando...</h1>
+              </ContainerPrincipalLoad>
+            )}
 
       </ContainerGrid>
 
