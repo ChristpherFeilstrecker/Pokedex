@@ -25,6 +25,5 @@ O que funciona:
 - Detalhes do pokemon selecionado
 
 O que não funciona: 
-- Responsividade
-- Sumir o card do pokemon que ja foi adicionado a pokedex
-- Loading Pages
+- Card soma da lista quando adicionado a pokedex, mas não retorna ao excluir, na troca de página a lista atualiza e voltam todos pokemons
+
