@@ -1,3 +1,4 @@
+import { screen } from "@testing-library/react";
 import styled from "styled-components";
 
 export const ContainerPrincipal = styled.div`
@@ -19,6 +20,15 @@ margin: 15px;
 height: 100%;
 gap: 2vh;
 font-size: 24px;
+
+      @media (min-device-width : 481px) and (max-device-width : 800px) {
+        grid-template-columns: 1fr 1fr ;
+      }
+
+      @media (min-device-width : 320px) and (max-device-width : 480px) {
+        grid-template-columns: 1fr ;
+      }
+    
 `
 
 export const Button = styled.button`
@@ -34,4 +44,13 @@ export const ContainerButtons = styled.div`
 display: flex;
 justify-content: center;
 margin-bottom: 15px;
+`
+export const ContainerPrincipalLoad = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 0;
+height: 60vh;
+background-color: #b9e3f0;
+font-size: 24px;
 `

@@ -38,7 +38,7 @@ export default function Header(props) {
         } else if (state === false) {
             return (
                 <Container>
-                    <Img src={Logo2} onClick={props.buttonFunction} />
+                    <Img src={props.icon} onClick={props.buttonFunction} />
                     <p><Img src={Logo} onClick={() => GoToHome(navigate)} /></p>
                     <p></p>
                 </Container>
