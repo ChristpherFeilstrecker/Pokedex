@@ -1,9 +1,9 @@
 # POKEDEX
 
-Nome dos integrantes: 
-- Fabio José Lucena de Oliveira 
+Nome dos integrantes:
+
 - Christopher Feilstrecker da Silva
-- Lucas De Souza Domingues
+- Fabio José Lucena de Oliveira 
 
 Link do Surge: https://stale-day.surge.sh/
 
