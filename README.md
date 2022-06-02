@@ -7,6 +7,10 @@ Nome dos integrantes:
 
 Link do Surge: https://stale-day.surge.sh/
 
+Imagens:
+
+https://user-images.githubusercontent.com/87909626/171635408-b8a45c2d-c8e4-4ae2-adfd-4048d45dec0a.mp4
+
 O que funciona:
  Na Página Principal
 - Botão para acessar pokedex
